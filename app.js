@@ -18,7 +18,14 @@ $(document).ready(function() {
   });
 
   $('.delete-btn').on('click', function() {
-    localStorage.removeItem("hrext");
+    //TODO add in a confirm if want to delete
+    //throw up confirm window
+    //capture result
+    //test boolean to delete
+    localStorage.removeItem('titleValue');
+    localStorage.removeItem('contentValue');
+    $('.debug').html(`<p>Items deleted</p>`)
+
   });
 
 
