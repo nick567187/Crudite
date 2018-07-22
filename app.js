@@ -8,13 +8,14 @@ $(document).ready(function() {
   	let titleValue = $('.input-field-title').val();
   	let contentValue = $('.input-field-body').val();
     localStorage.setItem(titleValue, contentValue)
+    $('.speech').html(`<p>I'll never forget what you told me about ${titleValue}</p>`)
+    $('.speech').css('display', 'block')
   });
 
   $('.get-btn').on('click', function() {
-    // console.log(localStorage.getItem("hrext"));
-    let titleValue = localStorage.getItem('titleValue')
-    let contentValue = localStorage.getItem('contentValue')
-    $('.debug').html(`<p>${titleValue} ${contentValue}</p>`)
+  	console.log('did it get')
+    let titleValue = localStorage.getItem($('.input-field-title').val())
+    $('.item-holder').html(`<p>${titleValue}</p>`)
   });
 
   $('.delete-btn').on('click', function() {
@@ -22,9 +23,8 @@ $(document).ready(function() {
     //throw up confirm window
     //capture result
     //test boolean to delete
-    localStorage.removeItem('titleValue');
-    localStorage.removeItem('contentValue');
-    $('.debug').html(`<p>Items deleted</p>`)
+    localStorage.removeItem($('.input-field-title').val());
+    $('.item-holder').html(`<p>Items deleted</p>`)
 
   });
 
