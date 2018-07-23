@@ -22,6 +22,8 @@
     color: black;
     background: white;
     border-radius: 25% 25% 25%;
+    transition: width 2s, height 2s;
+    flex-wrap: wrap;
 }
 
 .speech:after {
