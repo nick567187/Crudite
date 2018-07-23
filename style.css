@@ -43,11 +43,14 @@ button {
   width: 150px;
   padding: 3px;
   height: 25px;
-
+  background-color: white;
+  border-color: green;
+  border: 4px;
+  font-family: "Times New Roman";
 }
 
 button:hover {
-  background-color: white;	
+  background-color: dodgerblue;	
 }
 
 button:after {
@@ -108,7 +111,7 @@ h1 {
     left: 70px;
     font-size: 4em;
     flex-wrap: wrap;
-    width: 250px;
+    width: 350px;
     text-align: center;
     padding: 10px;
 }
